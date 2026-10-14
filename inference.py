@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import gradio as gr
 import PIL.Image as Image
 
-model = YOLO("jic_yolov8n.pt")
+model = YOLO("./weight/jic_yolov8n.pt")
 
 def predict_image(img, conf_threshold, iou_threshold):
     results = model.predict(
